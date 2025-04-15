@@ -17,6 +17,8 @@ t.setTag('PlanarConfiguration', Tiff.PlanarConfiguration.Chunky);
 switch bit
     case 16
         imdata = uint16(imdata);
+    case 24
+        imdata = uint32(imdata);
     case 32
         t.setTag('SampleFormat',Tiff.SampleFormat.IEEEFP);
         imdata = single(imdata);
